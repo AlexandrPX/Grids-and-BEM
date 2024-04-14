@@ -1,0 +1,362 @@
+@font-face {
+    font-family: 'TT Lakes Regular';
+    src: url('fonts/TTLakes-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes Medium';
+    src: url('fonts/TTLakes-Medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes Light';
+    src: url('fonts/TTLakes-Light.ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes Bold';
+    src: url('fonts/TTLakes-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: 'TT Lakes Regular';
+}
+
+.visually-hidden {
+    position: fixed;
+    transform: scale(0);
+}
+
+.header {
+    border-bottom: 1px solid #D9FFF5;
+}
+
+.header__inner {
+    min-height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.header__burger {
+    margin-left: 16px;
+}
+
+.burger {
+    border: none;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 50%;
+    background-color: #FF3E79;
+    position: relative;
+}
+
+.burger-rectangle {
+    width: 10px;
+    height: 2px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 19px;
+    left: 11px;
+}
+
+.burger-rectangle::before {
+    content: "";
+    width: 18px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #FFFFFF;
+    position: absolute;
+    bottom: 7px;
+    left: 0;
+}
+
+.burger-rectangle::after {
+    content: "";
+    width: 14px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 7px;
+    left: 0;
+}
+
+.header__logo {
+    margin-left: 16.73px;
+}
+
+.header__buttons {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+}
+
+.header__action-buttons-wrapper {
+    margin-left: 38.73px;
+    display: flex;
+}
+
+div.header__action-buttons {
+    display: none;
+}
+
+.action-buttons {
+    display: flex;
+}
+
+.action-buttons__repair {
+    position: relative;
+}
+
+.action-buttons__repair::before {
+    content: "";
+    background-color: #EAEAEA;
+    width: 2px;
+    height: 32px;
+    position: absolute;
+    left: -20px;
+    top: 4px;
+}
+
+.action-buttons__checkstatus {
+    margin-left: 16px;
+}
+
+.page-main {
+    background-color: #F8F8F8;
+}
+
+.page-main__title {
+    font-family: 'TT Lakes Bold';
+    font-size: 28px;
+    letter-spacing: -0.6px;
+    line-height: 40px;
+    margin: 0 0 0 16px;
+    padding-top: 24px;
+    position: relative;
+}
+
+.page-main__title::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 40px;
+    background-color: #41F6D7;
+    left: -16px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.page-nav__list {
+    padding: 0;
+    margin: 16px;
+    list-style: none;
+    display: flex;
+    white-space: nowrap;
+    overflow: auto;
+}
+
+.page-nav__list::-webkit-scrollbar {
+    display: none;
+}
+
+.page-nav__list-link {
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+    color: #7E7E82;
+    display: block;
+    margin: 0 13px;
+    padding: 4px;
+}
+
+.current-list-item {
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+}
+
+.page-legend__text {
+    margin: 16px;
+    color: #1B1C21;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+}
+
+.paragraph-2 {
+    display: none;
+}
+
+.button-read-more {
+    font-family: 'TT Lakes Medium';
+    color: #1B1C21;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    background-color: transparent;
+    border: none;
+    margin-left: 48px;
+    position: relative;
+}
+
+.button-read-more::before {
+    content: url(images/icons/icon_reed_more.svg);
+    position: absolute;
+    left: -15px;
+}
+
+.page-legend__image {
+    margin-top: 16px;
+}
+
+.page-legend__image-item {
+    width: 320px;
+}
+
+@media (min-width: 768px) {
+    .header__burger {
+        margin-left: 24px;
+        position: relative;
+    }
+
+    .header__burger::after {
+        content: "";
+        background-color: #EAEAEA;
+        width: 2px;
+        height: 32px;
+        position: absolute;
+        right: -20px;
+        top: 4px;
+    }
+
+    .header__logo {
+        margin-left: 42.73px;
+    }
+
+    .header__buttons {
+        margin-right: 24px;
+    }
+
+    div.header__action-buttons {
+        display: flex;
+        width: 152px;
+        justify-content: space-between;
+        margin-right: 42px;
+    }
+
+    .page-legend {
+        display: flex;
+    }
+
+    .paragraph-2 {
+        margin-top: 30px;
+        display: block;
+    }
+
+    .tablet-version-hide {
+        display: none;
+    }
+
+    .page-legend__image-item {
+        width: 360px;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+    }
+}
+
+@media (min-width: 1120px) {
+    .header__inner {
+        justify-content: end;
+    }
+
+    .header__wrapper {
+        display: none;
+    }
+
+    div.header__action-buttons {
+        display: none;
+    }
+
+    .header__request-buttons {
+        z-index: 1;
+    }
+
+    .action-buttons__repair {
+        margin-right: 160px;
+    }
+
+    .action-buttons__repair::before {
+        content: none;
+    }
+
+    .action-buttons__repair::after {
+        position: absolute;
+        left: -133px;
+        top: 9px;
+        content: "Оставить заявку";
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+    }
+
+    .action-buttons__checkstatus {
+        position: relative;
+    }
+
+    .action-buttons__checkstatus::before {
+        position: absolute;
+        left: -133px;
+        top: 9px;
+        content: "Статус ремонта";
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+    }
+
+    .page-main {
+        position: absolute;
+        top: 0;
+    }
+
+    .page-nav__list {
+        flex-wrap: wrap;
+    }
+
+    .page-nav__list-item {
+        margin-bottom: 12px;
+    }
+
+    .page-legend {
+        justify-content: space-between;
+    }
+
+    .page-legend__wrapper {
+        margin-left: 34px;
+    }
+
+    .page-legend__image {
+        margin-right: 28px;
+    }
+
+    .page-legend__image-item {
+        width: 531.35px;
+    }
+
+    .tablet-version-hide {
+        display: inline;
+    }
+}
